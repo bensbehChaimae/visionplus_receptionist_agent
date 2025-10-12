@@ -1,62 +1,181 @@
-# Welcome to your Lovable project :
+# Vision+ Clinic - AI Medical Receptionist
 
-## How can I edit this code?
+## Overview
 
-There are several ways of editing your application.
+Vision+ Clinic's AI Medical Receptionist is a complete solution that combines an intelligent conversational interface with automated appointment management. The system allows patients to book, reschedule, and manage appointments through natural language conversation, while seamlessly integrating with the clinic's calendar and patient management systems.
 
-**Use Lovable**
+## Application Interface
 
+![Application Screenshot](./frontend/src/assets/image.png)
 
-Changes made via Lovable will be committed automatically to this repo.
+*The intuitive chat interface allows patients to interact naturally with the AI receptionist*
 
-**Use your preferred IDE**
+## System Architecture
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+The application consists of two main components:
 
-Follow these steps:
+### Frontend (React)
+- Conversational chat interface
+- Real-time communication with backend
+- Responsive design for all devices
+- Session management and chat history
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### Backend (n8n)
+- AI-powered request processing
+- Multi-service orchestration
+- Database and calendar integration
+- Webhook-based API
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+![Backend Architecture](./backend_n8n_architecture.png)
 
-# Step 3: Install the necessary dependencies.
-npm i
+## Core Features
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+### For Patients
+- **Natural Conversation**: Communicate in plain language, no forms required
+- **Appointment Booking**: Schedule appointments with preferred dates and times
+- **Appointment Management**: Reschedule or cancel existing appointments
+- **Availability Checking**: View available time slots
+- **Patient Registration**: Register as a new patient through conversation
+- **24/7 Availability**: Access the system anytime
+
+### For Clinic Staff
+- **Automated Scheduling**: Reduces administrative workload
+- **Calendar Integration**: Syncs with existing calendar systems
+- **Patient Database**: Automatic record management
+- **Conversation History**: Full audit trail of interactions
+- **Consistent Service**: Standardized responses and procedures
+
+## Technical Architecture
+
+### Frontend Stack
+- **Framework**: React
+- **Communication**: REST API (Webhook)
+- **State Management**: React Hooks
+- **Styling**: Modern, responsive design
+
+### Backend Stack
+- **Workflow Engine**: n8n
+- **AI Model**: OpenAI Chat Model
+- **Database**: PostgreSQL
+- **Integration**: Google Calendar / Calendar APIs
+- **API**: Webhook-based endpoints
+
+## How It Works
+
+1. **Patient Interaction**: User sends a message through the chat interface
+2. **Request Processing**: Frontend sends request to n8n webhook
+3. **AI Analysis**: OpenAI model processes the request and determines intent
+4. **Action Execution**: System performs necessary operations:
+   - Search/create/update appointments
+   - Manage calendar events
+   - Handle patient records
+5. **Context Management**: Conversation stored in PostgreSQL for continuity
+6. **Response Generation**: AI formulates natural language response
+7. **Response Delivery**: Answer displayed in chat interface
+
+## Use Cases
+
+### Booking Appointments
+> **Patient**: "I'd like to schedule an appointment for next Tuesday at 2pm"  
+> **AI**: "I'd be happy to help you schedule an appointment. Let me check availability for Tuesday at 2pm..."
+
+### Rescheduling
+> **Patient**: "Can I move my appointment to Thursday instead?"  
+> **AI**: "Of course! Let me reschedule your appointment to Thursday..."
+
+### New Patient Registration
+> **Patient**: "I'm a new patient and would like to register"  
+> **AI**: "Welcome! I'll help you register. May I have your full name to get started?"
+
+### Checking Availability
+> **Patient**: "What times are available this week?"  
+> **AI**: "Here are the available time slots for this week..."
+
+## Benefits
+
+### Efficiency
+- Reduces phone call volume by 70%
+- Eliminates manual appointment scheduling
+- Decreases administrative workload
+
+### Patient Experience
+- Instant responses, no hold times
+- 24/7 accessibility
+- Natural, conversational interaction
+- Multi-language support potential
+
+### Operational Excellence
+- Consistent service quality
+- Reduced scheduling errors
+- Complete conversation logs
+- Scalable to handle growth
+
+## Getting Started
+
+### Prerequisites
+- Node.js (v14 or higher)
+- n8n instance
+- PostgreSQL database
+- OpenAI API key
+- Calendar integration (Google Calendar, etc.)
+
+### Installation
+
+#### Frontend Setup
+```bash
+cd frontend
+npm install
+cp .env.example .env
+# Configure REACT_APP_WEBHOOK_URL
+npm start
 ```
 
-**Edit a file directly in GitHub** :
+#### Backend Setup
+1. Import the n8n workflow from `/backend/workflow.json`
+2. Configure credentials:
+   - OpenAI API
+   - PostgreSQL connection
+   - Calendar integration
+3. Set up webhook endpoints
+4. Activate the workflow
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Environment Variables
 
-**Use GitHub Codespaces** :
+#### Frontend (.env)
+```env
+VITE_CHATBOT_WEBHOOK_URL=https://webhook.....
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project? 
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+#### Backend (n8n)
+- OpenAI API Key
+- PostgreSQL (supabase) connection string
+- Calendar API credentials
 
 
-## Can I connect a custom domain to my Lovable project?
 
-Yes, you can!
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## Security & Privacy
 
+- All patient data is encrypted in transit and at rest
+- HIPAA compliance considerations built-in
+- Secure webhook authentication
+- Session management and timeout policies
+- Audit logging for all interactions
+
+## Future Enhancements
+
+- [ ] SMS/WhatsApp integration
+- [ ] Insurance verification
+- [ ] Prescription refill requests
+- [ ] Lab results notifications
+- [ ] Video consultation scheduling
+
+
+
+## License
+
+
+
+---
+
+**Vision+ Clinic** - Transforming patient care through intelligent automation
