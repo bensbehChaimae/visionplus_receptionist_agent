@@ -1,5 +1,11 @@
 # Vision+ Clinic - AI Medical Receptionist
 
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![n8n](https://img.shields.io/badge/n8n-AE4EF5?style=for-the-badge&logo=n8n&logoColor=white)
+![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white)
+![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white)
+![Google Calendar API](https://img.shields.io/badge/Google%20Calendar%20API-4285F4?style=for-the-badge&logo=googlecalendar&logoColor=white)
+
 ## Overview
 
 Vision+ Clinic's AI Medical Receptionist is a complete solution that combines an intelligent conversational interface with automated appointment management. The system allows patients to book, reschedule, and manage appointments through natural language conversation, while seamlessly integrating with the clinic's calendar and patient management systems.
