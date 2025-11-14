@@ -12,9 +12,13 @@ Vision+ Clinic's AI Medical Receptionist is a complete solution that combines an
 
 ## Application Interface
 
+*The intuitive chat interface allows patients to interact naturally with the AI receptionist*
+
 ![Application Screenshot](./frontend/src/assets/image.png)
 
-*The intuitive chat interface allows patients to interact naturally with the AI receptionist*
+![Application Screenshot](./frontend/src/assets/demo2.png)
+
+![Application Screenshot](./frontend/src/assets/demo3.png)
 
 ## System Architecture
 
