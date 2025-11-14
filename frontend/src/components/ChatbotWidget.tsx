@@ -98,7 +98,7 @@ const ChatbotWidget = () => {
       
       const errorMessage: Message = {
         id: (Date.now() + 1).toString(),
-        content: "I'm having trouble connecting right now. Please try again in a moment or contact us directly at +212 539 00 88 77.",
+        content: "I'm having trouble connecting right now. Please try again in a moment ( webhook inactive )",
         sender: "bot",
         timestamp: new Date(),
       };
