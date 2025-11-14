@@ -32,7 +32,7 @@ The application consists of two main components:
 - Database and calendar integration
 - Webhook-based API
 
-![Backend Architecture](./backend/backend_n8n_architecture.png)
+![Backend Architecture](./backend/backend_n8n_architecture_mcp.png)
 
 ## Core Features
 
